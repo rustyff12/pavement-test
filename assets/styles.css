@@ -36,6 +36,10 @@ font-family: "Playfair Display", serif;
     /* Fonts */
     --ff-main: "Playfair Display", serif;
     --ff-secondary: "Open Sans", sans-serif;
+
+    /* Border */
+    --br-std-card: 5%;
+    --br-btn: 28px;
 }
 
 body {
@@ -114,7 +118,7 @@ header::before {
 .hero-button {
     background-color: var(--clr-orange);
     color: var(--clr-white);
-    border-radius: 28px;
+    border-radius: var(--br-btn);
     text-transform: uppercase;
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -137,11 +141,11 @@ header::before {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    border-radius: 5%;
+    border-radius: var(--br-std-card);
 }
 
 .card img {
-    border-radius: 5%;
+    border-radius: var(--br-std-card);
 }
 
 .card-content {
@@ -171,7 +175,7 @@ header::before {
     border: 2px solid var(--clr-orange);
     background-color: var(--clr-white);
     color: var(--clr-orange);
-    border-radius: 28px;
+    border-radius: var(--br-btn);
     text-transform: uppercase;
     font-size: 1rem;
     padding: 1rem 2rem;
@@ -208,7 +212,7 @@ header::before {
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
-    border-radius: 5%;
+    border-radius: var(--br-std-card);
 }
 
 .card-image {
@@ -221,6 +225,129 @@ header::before {
     font-size: 2.5rem;
 }
 
+/* About */
+#about {
+    background-color: var(--clr-white);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text h2,
+.about-text h4 {
+    font-family: var(--ff-main);
+}
+
+.about-text p {
+    font-family: var(--ff-secondary);
+}
+
+.about-text,
+.about-side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-text h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+.about-text h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.about-side {
+    padding: 2rem;
+}
+
+.about-side-text-card {
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+    border-radius: var(--br-std-card);
+    font-size: 1.15rem;
+    padding: 2rem 1rem;
+    font-family: var(--ff-secondary);
+}
+
+.about-side-text-card ul li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+/* Other Services */
+#other-services {
+    position: relative;
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#other-services::before {
+    content: "";
+    background-image: url("./images/Stone-BG-1024x683.webp");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    filter: brightness(125%);
+}
+
+#other-services h2 {
+    color: var(--clr-black);
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.other-services-line::before {
+    content: "";
+    border-bottom: 4px solid var(--clr-orange);
+    position: absolute;
+    width: 30%;
+}
+
+.other-services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service-button {
+    border-radius: var(--br-btn);
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    padding: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-block;
+    color: var(--clr-white);
+    position: relative;
+    filter: contrast(120%) brightness(90%);
+}
+/* Service button images */
+#service-button-one,
+#service-button-two,
+#service-button-three,
+#service-button-four {
+    background-size: cover;
+}
+#service-button-one {
+    background-image: url("./images/hero-image.jpg");
+}
+#service-button-two {
+    background-image: url("./images/card-image-1.webp");
+}
+#service-button-three {
+    background-image: url("./images/card-image-2.webp");
+}
+#service-button-four {
+    background-image: url("./images/card-image-3.webp");
+}
 @media screen and (min-width: 980px) {
     /* Header / Hero */
     header nav {
